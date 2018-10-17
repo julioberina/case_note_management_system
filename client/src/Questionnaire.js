@@ -8,6 +8,7 @@ class Questionnaire extends Component {
     this.state = {
       dateOfCompletion: undefined,
       foundJob: undefined,
+      email: undefined,
       applyingToJobs: undefined,
       jobsPerWeek: undefined,
       currentResume: undefined,
@@ -31,10 +32,7 @@ class Questionnaire extends Component {
     this.handleAttendingDevelopment = (e, { value }) => this.setState({ attendingDevelopment: value });
     this.handleMeetWithRep = (e, { value }) => this.setState({ meetWithRep: value });
 
-    // this.handleSubmit = (e) => {
-    //     debugger
-    //     console.log(this.refs.value)
-    // }
+    this.handleSubmit = (e) => console.log(this.state);
 
     this.handleDate = (e) => {
         var date = e.target.value.split("-");
@@ -42,6 +40,7 @@ class Questionnaire extends Component {
         this.setState({ dateOfCompletion: modified_date });
     }
 
+    this.handleEmail = (e) => this.setState({ email: e.target.value });
     this.handleResume = (e) => this.setState({ currentResume: e.target.value });
   }
 
@@ -142,6 +141,13 @@ class Questionnaire extends Component {
           </Form.Field>
           <Form.Field>
             <Input type="date" name="training" ref="date-of-completion" onChange={this.handleDate}/>
+          </Form.Field><br />
+
+          <Form.Field>
+            <Header as='h4'>What is your email address?</Header>
+          </Form.Field>
+          <Form.Field>
+            <Input type="email" name="email" ref="email-address" onChange={this.handleEmail}/>
           </Form.Field><br />
 
           <Form.Field>
