@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Form, Input, Radio, Label, Button } from 'semantic-ui-react';
+import './App.css';
 
 class Questionnaire extends Component {
   constructor(props) {

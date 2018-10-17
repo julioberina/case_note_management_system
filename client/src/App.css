@@ -2,6 +2,10 @@ img {
   width: 100%;
 }
 
+.questionnaire-style {
+  padding-top: 40px;
+}
+
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
