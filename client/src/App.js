@@ -50,6 +50,7 @@ class App extends Component {
                         <Route exact path="/" component={Login} />
                     </div>
                     <Switch>
+                        <Route exact path="/questionnaire" component={Questionnaire} />
                         <PrivateRoute exact path="/dashboard" component={Dashboard} />
                     </Switch>
                 </div>
@@ -63,4 +64,3 @@ class App extends Component {
 export default App;
 
 // <Questionnaire />
-
